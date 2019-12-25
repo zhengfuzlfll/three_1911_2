@@ -1,0 +1,22 @@
+{
+  "name": "three_1911_2",
+  "version": "1.0.0",
+  "description": "React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://zhengfuzlfll:laofeilingzhengfuzhaoffl@github.com/zhengfuzlfll/three_1911_2.git"
+  },
+  "author": "fi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhengfuzlfll/three_1911_2/issues"
+  },
+  "homepage": "https://github.com/zhengfuzlfll/three_1911_2#readme",
+  "dependencies": {
+    "react": "^16.12.0"
+  }
+}
