@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zhengfuzlfll/three_1911_2#readme",
   "dependencies": {
-    "react": "^16.12.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }

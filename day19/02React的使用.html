@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom//umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--  * ReactDOM.render(template,targetDOM)
+              * React.createElement(type,[props],[...children])
+         -->
+    </div>
+    <script>
+        ReactDOM.render(
+
+            // React.createElement('div', {
+            //         id: 'container'
+            //     },
+            //     "3333333333333"
+            // ),
+
+            /* <div id="app">
+                    <div id="container">3333333333333</div>
+               </div> 
+            */
+            /* -------------------------- */
+            // React.createElement('div', {
+            //     id: 'container'
+            // }, React.createElement('div', null, '222222'))
+            /*  <div id="app">
+                     <div id="container">
+                         <div>222222</div>
+                     </div>
+                 </div> 
+             */
+
+            /* ----------------------- */
+            // React.createElement('div', {
+            //     id: 'container'
+            // }, React.createElement('ul', null, [React.createElement('li', null, '拉塞尔指环王'), React.createElement(
+            //     'li', null, '乔丹')]))
+
+            /* <div id="app">
+                <div id="container">
+                    <ul>
+                        <li>拉塞尔指环王</li>
+                        <li>乔丹</li>
+                    </ul>
+                </div>
+              </div> 
+            */
+            /* 安装babel进行编译  scipt标签引入*/
+            <div id="app">
+                <div id="container">
+                   <h1>React</h1>
+                </div>
+            </div> 
+            ,
+
+            /* 挂载点 -----必须写后面，否则不成功 */
+            document.getElementById('app'),
+
+        )
+    </script>
+</body>
+
+</html>
