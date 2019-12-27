@@ -14,12 +14,13 @@ function TodoContent(props) {
 // }
 //       {/* <TodoItem></TodoItem> */}
 //     </table>
-return (
-    <table>
+    return (
+        <React.Fragment>
+        <table>
         <thead>
             <tr>
                 <th>
-                    <input type="checkbox"></input>
+                    <input type="checkbox" checked={props.checkedAll} onChange={props.selectedAll}></input>
                     全选
                 </th>
                 <th>#</th>
@@ -31,15 +32,24 @@ return (
         <tbody>
           {
               props.datalist.map((item,index)=>{
-                  return <TodoItem data={item} index={index} key={item.id}></TodoItem>
+                  return <TodoItem 
+                    data={item} 
+                    index={index} 
+                    key={item.id}
+                    removeItem={props.removeItem}
+                    compeletedItem={props.compeletedItem}
+                    selectedItem={props.selectedItem}
+
+                  ></TodoItem>
               })
           }
         </tbody>
     </table>
 
-
-  )
-}
+<div>总数：{props.datalist.length}  完成：{props.datalist.filter(item=>item.done).length}  未完成：{props.datalist.filter(item=>!item.done).length} </div>
+        </React.Fragment>
+      )
+    }
 
 /* 导出 */
 export default TodoContent;

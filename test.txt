@@ -2,7 +2,4 @@
 
 
 
-https://zhengfuzlfll:laofeilingzhengfuzhaoffl@github.com/zhengfuzlfll/three_1911_2.git
-
-
 touch .gitignore     创建忽略文件
