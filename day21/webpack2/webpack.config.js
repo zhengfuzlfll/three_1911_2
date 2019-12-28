@@ -45,6 +45,7 @@ module.exports = {
                 loader: 'babel-loader',
                 options: {
                     presets: ['@babel/preset-react'],
+                    /* 配置  支持静态方法 */
                     plugins:['@babel/plugin-proposal-class-properties']
                 }
             }]

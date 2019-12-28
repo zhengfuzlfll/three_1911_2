@@ -173,7 +173,7 @@ class TodoList extends Component {
 }
 
 // console.log(TodoList);
-console.dir(TodoList);
+// console.dir(TodoList);
 
 /* 往模块对象中添加TodoList属性 */
 // export function TodoList(){     return (         <div>

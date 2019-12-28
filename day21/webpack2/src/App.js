@@ -4,11 +4,16 @@ import React, {
 
 import TodoList from './components/TodoList.js';
 
+/* 声明周期函数 */
+import Lifecycle from './components/Lifecycle.js'
+
 class App extends Component {
     render(){
         return (
-            <TodoList/>
-            
+   
+            // <TodoList/>
+            <Lifecycle></Lifecycle>
+        
         )
     }
 }
