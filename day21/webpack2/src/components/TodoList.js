@@ -36,7 +36,8 @@ class TodoList extends Component {
         title: "女同学变成白富美，迎娶高富帅",
         done: false,
         selected: false
-      }]
+      }
+    ]
     };
     /* 在初始化时改变this指向 */
     this.addItem = this.addItem.bind(this);
@@ -47,6 +48,22 @@ class TodoList extends Component {
     /* shift+alt+下键 */
     /* shift+ctrl +L 选中多个 */
   }
+
+  /* ------类组件   静态方法 */
+  static say(){
+    console.log(666)
+  }
+  /* 类组件       静态属性（目前浏览器不支持） */
+  /* 需装插方可支持=>1、 npm i -D @babel/plugin-proposal-class-properties */
+  /* 
+    2、配置webpack.config.js
+  */
+  static defaultProps={
+    name:"laoxie"
+  }
+
+
+
 
 
   /* 谁的数据谁修改 */
@@ -129,7 +146,6 @@ class TodoList extends Component {
   }
 
 
-
   render() {
     // console.log("this-------------=>",this)
     /*render中的this 指向实例 */
@@ -141,6 +157,7 @@ class TodoList extends Component {
           <TodoForm addItem = {this.addItem}></TodoForm>
           
           <TodoContent
+          /* this.state.datalist   {a:100,b:200}*/
           datalist = {this.state.datalist}
           // removeItem = {this.removeItem}
           // compeletedItem = {this.compeletedItem  }
@@ -154,6 +171,9 @@ class TodoList extends Component {
     )
   }
 }
+
+// console.log(TodoList);
+console.dir(TodoList);
 
 /* 往模块对象中添加TodoList属性 */
 // export function TodoList(){     return (         <div>

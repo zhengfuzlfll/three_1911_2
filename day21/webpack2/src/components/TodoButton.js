@@ -10,6 +10,7 @@ const TodoButton = (props) => {
     })
 
   return (
+      /* 任何数据都在props中 */
     <button onClick={props.onClick}>{props.children}</button>
   )
 }

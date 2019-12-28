@@ -12,4 +12,4 @@ ReactDOM.render(
     ,
     document.querySelector('#app')
 )
-{console.log(React)}
+// {console.log(React)}

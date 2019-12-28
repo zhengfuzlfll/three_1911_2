@@ -1,9 +1,11 @@
 import React from 'react';
-
 import TodoItem from './TodoItem.js';
 
+/* 类型校验   npm i prop-types -D*/
+import PropTypes from 'prop-types';
+
 function TodoContent(props) {
-  console.log(props)
+  // console.log(props)
 //   return (
 //     <table>
 //       {/* TodoContent */}
@@ -49,7 +51,20 @@ function TodoContent(props) {
 <div>总数：{props.datalist.length}  完成：{props.datalist.filter(item=>item.done).length}  未完成：{props.datalist.filter(item=>!item.done).length} </div>
         </React.Fragment>
       )
-    }
+}
+  
+    /* datalist传入的类型校验 */
+  TodoContent.propTypes={
+    datalist:PropTypes.array.isRequired//必填，限定他人的使用
+  }
+  
+/* 设置默认值 ====>可不填isRequired*/
+TodoContent.defaultProps={
+  datalist:[]
+}
+
+/* 类组件的静态属性，默认有静态方法   =>TodoList    static* /
+
 
 /* 导出 */
 export default TodoContent;
