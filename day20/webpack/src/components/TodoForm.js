@@ -22,7 +22,7 @@ class TodoForm extends Component {
     /* 修正this的指向    */
     this.changeTitle = this.changeTitle.bind(this)
     this.additem = this.additem.bind(this)
-    // this.handleEnterKey = this.handleEnterKey.bind(this)
+    this.handleEnterKey = this.handleEnterKey.bind(this)
   }
 
   /*  */
@@ -59,14 +59,14 @@ class TodoForm extends Component {
   // })
 
   /* 回车插入数据 */
-  // handleEnterKey = (e) => {
-  //   if (e.nativeEvent.keyCode === 13) { //e.nativeEvent获取原生的事件对像
-  //     // console.log(66666);
+  handleEnterKey = function (e) {
+    if (e.nativeEvent.keyCode === 13) { //e.nativeEvent获取原生的事件对像
+      // console.log(66666);
       
-  //     this.additem()
-  //   }
-  //   // console.log(e); 
-  // }
+      this.additem()
+    }
+    // console.log(e); 
+  }
 
   // componentDidUpdate(){
 	// 	document.addEventListener('keyup',this.onkeyup);
@@ -79,7 +79,7 @@ class TodoForm extends Component {
   render() {
     let { addItem } = this.props
     return (
-      <div>
+      <div onKeyUp={this.handleEnterKey}>
         {/* TodoForm */}
         {/* 给input 的value 添加数据，必须提供改变这个数据的方法*/}
         {/* <input type="text" value={this.state.title} onChange={this.changeTitle}></input> */}
@@ -87,7 +87,7 @@ class TodoForm extends Component {
         {/* 字符串写法=>节点操作，获得焦点 */}
         {/* <input type="text" ref='title'  value={this.state.title} onChange={this.changeTitle}></input> */}
         {/* 回调写法==>>推荐          回车*/}
-        <input type="text" onKeyUp={this.handleEnterKey} ref={(ele) => this.title = ele} value={this.state.title} onChange={this.changeTitle}></input>
+        <input type="text" ref={(ele) => this.title = ele} value={this.state.title} onChange={this.changeTitle}></input>
         {/* <input type="text"  ref={(ele) => this.title = ele} value={this.state.title} onChange={this.changeTitle}></input> */}
         {/* <button onClick={addItem}>添加</button> */}
         {/* 传参----------- */}

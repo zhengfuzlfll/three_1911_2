@@ -81,7 +81,6 @@ class Lifecycle extends Component {
             </>
         )
     }
-
 }
 
 export default Lifecycle;

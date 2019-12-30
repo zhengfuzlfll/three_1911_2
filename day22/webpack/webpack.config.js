@@ -3,13 +3,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     //1、入口文件
-    entry: './src/index.js',
+    entry: {
+        home: './src/index.js',
+        login: './src/login.js'
+    },
 
 
     //2、 出口路径
     output: {
         /* 路径要为绝对路径 */
-        path: path.resolve('./dist')
+        path: path.resolve(__dirname, './dist')
     },
 
     /* 5、测试服务器   npm i -D webpack-dev-server */
@@ -40,9 +43,13 @@ module.exports = {
             //-----------js文件编译规则
             /* 匹配以 .js  结尾的文件=>即js文件 */
             test: /\.js$/,
+            /* 排除   绝对路径*/
+            exclude: path.resolve(__dirname, 'node_modules'),
             /* 使用哪种加载器 */
             use: [{
                 loader: 'babel-loader',
+
+
                 options: {
                     presets: ['@babel/preset-react']
                 }

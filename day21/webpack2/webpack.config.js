@@ -46,7 +46,7 @@ module.exports = {
                 options: {
                     presets: ['@babel/preset-react'],
                     /* 配置  支持静态方法 */
-                    plugins:['@babel/plugin-proposal-class-properties']
+                    plugins: ['@babel/plugin-proposal-class-properties']
                 }
             }]
             //-----------其他文件编译规则

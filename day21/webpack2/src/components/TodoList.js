@@ -101,6 +101,7 @@ class TodoList extends Component {
       datalist
     })
   }
+  
   /* 改  是否完成 */
   compeletedItem(id) {
     let datalist = this.state.datalist.map(item => {
@@ -145,7 +146,7 @@ class TodoList extends Component {
     
   }
 
-
+ 
   render() {
     // console.log("this-------------=>",this)
     /*render中的this 指向实例 */

@@ -120,7 +120,9 @@ class TodoList extends Component {
     })
     
   }
-
+  // shouldComponentUpdate(){
+  //   return false;
+  // }
 
 
   render() {
@@ -135,13 +137,9 @@ class TodoList extends Component {
         compeletedItem = {this.compeletedItem  }
         selectedItem = {this.selectedItem }
         checkedAll = {this.state.checkedAll }
-        selectedAll = { this.selectedAll }
+        selectedAll = { this.selectedAll}
         ></TodoContent>
       </div>
-
-
-     
-
     )
   }
 }
