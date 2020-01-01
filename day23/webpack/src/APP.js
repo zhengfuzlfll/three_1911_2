@@ -15,9 +15,9 @@ import { Menu, Icon } from 'antd';
 
 
 /* 引入组件 */
-import Home from '../pages/home.js';
-import Login from '../pages/Login.js';
-import Reg from '../pages/Reg.js';
+import Home from './pages/home.js';
+import Login from './pages/Login.js';
+import Reg from './pages/Reg.js';
 
 
 
