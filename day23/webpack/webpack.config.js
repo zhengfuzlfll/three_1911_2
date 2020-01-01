@@ -36,23 +36,33 @@ module.exports = {
     module: {
         /* 加载器的规则 */
         rules: [{
-            //-----------js文件编译规则
-            /* 匹配以 .js  结尾的文件=>即js文件 */
-            /* js */
-            // test: /\.js$/,
-            /* js/jsx 正则*/
-            test: /\.jsx?$/,
-            /* 排除   绝对路径  =>优化编译速度，排除即不编译node_modules*/
-            exclude: path.resolve(__dirname, 'node_modules'),
-            /* 使用哪种加载器 */
-            use: [{
-                loader: 'babel-loader',
-                options: { //------------^^^^^单词写错-----------[ptions]
-                    presets: ['@babel/preset-react']
-                }
-            }]
+                //-----------js文件编译规则
+                /* 匹配以 .js  结尾的文件=>即js文件 */
+                /* js */
+                // test: /\.js$/,
+                /* js/jsx 正则*/
+                test: /\.jsx?$/,
+                /* 排除   绝对路径  =>优化编译速度，排除即不编译node_modules*/
+                exclude: path.resolve(__dirname, 'node_modules'),
+                /* 使用哪种加载器 */
+                use: [{
+                    loader: 'babel-loader',
+                    options: { //------------^^^^^单词写错-----------[ptions]
+                        presets: ['@babel/preset-react']
+                    }
+                }]
+            },
             //-----------其他文件编译规则
-        }]
+            //css-loader
+            {
+                test: /\.css$/,
+                /* 无参数，可写成数组形式 =>两者有顺序问题*/
+                // use: ['css-loader','style-loader']
+                /* 从后往前编译，即先编译css-loader=>style-loader */
+                use: ['style-loader', 'css-loader']
+
+            }
+        ]
 
     },
 

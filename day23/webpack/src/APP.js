@@ -2,10 +2,22 @@ import React ,{Component}from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter,Route,Link,NavLink, Switch, Redirect} from 'react-router-dom';
 /* NavLink 与Link的区别：NavLink自带高亮效果 */
+
+/* antd --------------------*/
+import { DatePicker } from 'antd';
+// 引入样式 =>配置加载器loader  编译css
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+/* memu */
+import { Menu, Icon } from 'antd';
+
+
 /* 引入组件 */
 import Home from '../pages/home.js';
 import Login from '../pages/Login.js';
 import Reg from '../pages/Reg.js';
+
+
+
 
 
 class APP extends Component{
@@ -16,34 +28,81 @@ class APP extends Component{
                 {
                 name:'home',
                 path:'./home',
-                text:'首页'
+                text:'首页',
+                icon:'home'
             },
                 {
                 name:'login',
                 path:'./login',
-                text:'登录'
+                text:'登录',
+                icon:'login'
             },
                 {
                 name:'reg',
                 path:'./reg',
-                text:'注册'
+                text:'注册',
+                icon:'user-add'
             },
         ]
-        }
+        },
+        
+        this.changeMenu=this.changeMenu.bind(this)
     }
+
+    /* 路由导航切换------------- */
+    changeMenu(current){
+        // console.log(current)
+        let {key}=current
+        /* 编程式导航 =>获取history 对象*/
+        /* 利用<Route />  组件渲染    =>index.js    */
+        /* 接收=>  this.props.history */
+        this.props.history.push(key)
+    }
+
+
     render(){
+        let {menu} =this.state
+        console.log(this.props)
         return <div>
              {/* <HashRouter>*/}
              {/* 任何跳转都需要放在router中 ==>放在根 index.js中最好 */}
-            <ul>
+               {/*  声明式导航，Link 
+                        属性 activeStyle   被点中的自带高亮效果*/}
+            {/* <ul>
                 {
                     this.state.menu.map(item=>{
-                        /* 声明式导航，Link */
-                        /* 属性 activeStyle   被点中的自带高亮效果*/
+                      
                         return <li key={item.name}><NavLink to={item.path} activeStyle={{color:'#f00'}}>{item.text}</NavLink></li>
                     })
                 }
-            </ul>
+            </ul> */}
+
+            <Menu mode="horizontal" onSelect={this.changeMenu}>
+                  
+                    {
+                       menu.map(item=>{
+                            // return <Menu.Item key={item.name}>
+                            return <Menu.Item key={item.path}>
+                                {/* 声明式导航  NavLink   影响antd的样式 */}
+                                {/* <NavLink to={item.path} activeStyle={{color:'#f00'}}> */}
+                                    <Icon type={item.icon} />
+                                     {item.text}
+                                {/* </NavLink> */}
+                            </Menu.Item>
+                        })
+                    }
+            </Menu>
+               
+      
+
+
+
+
+
+
+
+
+
             {/* <h1>React-Router-Dom 4  路由配置</h1> */}
             {/* 路由模式 */}
            {/* HasRouter=>表示使用哈希路由 */}
@@ -56,7 +115,7 @@ class APP extends Component{
                 <Route path='/login' component={Login}></Route>
                 <Route path='/reg' component={Reg}></Route>
                 <Route path='/notfound' render={()=><h1>你访问的页面不存在！</h1> }></Route>
-                {/* 重定向 '/'=>'/home'*/}
+                {/* 重定向 '/'=>'/home'=>精确匹配*/}
                 <Redirect from='/' to='/home' exact></Redirect>
                 {/* 404   写在最后*/}
                 <Redirect to='/notfound'></Redirect>

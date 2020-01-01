@@ -12,3 +12,6 @@ npm i html-webpack-plugin -D
 
 //antd
 npm install antd --save
+
+// 编译css 
+npm i css-loader style-loader -D
