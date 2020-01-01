@@ -4,8 +4,11 @@ import {
 } from 'react-dom';
 
 import APP from './APP'
+import { HashRouter } from 'react-router-dom';
 
 render(
-    <APP></APP>,
+    <HashRouter>
+        <APP></APP>
+    </HashRouter>,
     document.querySelector("#app")
 )

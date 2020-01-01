@@ -47,7 +47,7 @@ module.exports = {
             /* 使用哪种加载器 */
             use: [{
                 loader: 'babel-loader',
-                options: { //------------单词写错-----------[ptions]
+                options: { //------------^^^^^单词写错-----------[ptions]
                     presets: ['@babel/preset-react']
                 }
             }]
@@ -55,11 +55,6 @@ module.exports = {
         }]
 
     },
-
-
-
-
-
 
 
 
