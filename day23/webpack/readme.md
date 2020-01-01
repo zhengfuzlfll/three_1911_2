@@ -9,3 +9,6 @@ npm i webpack webpack-cli webpack-dev-server -D
 
 //插件plugin
 npm i html-webpack-plugin -D
+
+//antd
+npm install antd --save
