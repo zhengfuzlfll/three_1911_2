@@ -1,7 +1,10 @@
 import React ,{Component}from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter,Route,Link,NavLink, Switch, Redirect} from 'react-router-dom';
-/* NavLink 与Link的区别：NavLink自带高亮效果 */
+import {HashRouter,Route,Link,NavLink, Switch, Redirect,withRouter} from 'react-router-dom';
+/* NavLink 与Link的区别：NavLink自带高亮效果
+  withRouter高阶组件 
+  Redirect  重定向
+*/
 
 /* antd --------------------*/
 import { DatePicker } from 'antd';
@@ -24,22 +27,23 @@ class APP extends Component{
     constructor(props){
         super(props);
         this.state={
+            selectedKeys:['/home'],
             menu:[
                 {
                 name:'home',
-                path:'./home',
+                path:'/home',
                 text:'首页',
                 icon:'home'
             },
                 {
                 name:'login',
-                path:'./login',
+                path:'/login',
                 text:'登录',
                 icon:'login'
             },
                 {
                 name:'reg',
-                path:'./reg',
+                path:'/reg',
                 text:'注册',
                 icon:'user-add'
             },
@@ -56,13 +60,22 @@ class APP extends Component{
         /* 编程式导航 =>获取history 对象*/
         /* 利用<Route />  组件渲染    =>index.js    */
         /* 接收=>  this.props.history */
-        this.props.history.push(key)
+        this.props.history.push(key);
+        this.setState({
+            selectedKeys:[key]
+        })
     }
 
+    componentDidMount(){
+        /* 在刷新时高亮保持不变 */
+        this.setState({
+            selectedKeys:[this.props.location.pathname]
+        })
+    }
 
     render(){
-        let {menu} =this.state
-        console.log(this.props)
+        let {menu,selectedKeys} =this.state
+        console.log('APP',this.props)
         return <div>
              {/* <HashRouter>*/}
              {/* 任何跳转都需要放在router中 ==>放在根 index.js中最好 */}
@@ -77,7 +90,12 @@ class APP extends Component{
                 }
             </ul> */}
 
-            <Menu mode="horizontal" onSelect={this.changeMenu}>
+            <Menu 
+             mode="horizontal" 
+             onSelect={this.changeMenu} 
+             /*defaultSelectedKeys仅在初始值时生效  */
+            //   defaultSelectedKeys={selectedKeys}
+            selectedKeys={selectedKeys}>
                   
                     {
                        menu.map(item=>{
@@ -127,4 +145,7 @@ class APP extends Component{
         </div>
     }
 }
+
+/* 高阶组件，获取到history */
+APP=withRouter(APP)
 export default APP;

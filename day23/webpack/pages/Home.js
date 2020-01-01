@@ -4,6 +4,7 @@ import React, {
 
 class Home extends Component{
     render(){
+    console.log('Home',this.props)
         return <div>
             Home
         </div>
