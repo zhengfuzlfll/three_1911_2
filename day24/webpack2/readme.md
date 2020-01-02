@@ -18,13 +18,3 @@ npm i css-loader style-loader -D
 
 //浏览器支持装饰器模式,再配置webpack
 npm i -D @babel/plugin-proposal-decorators
-
-
-//编译css  
-npm i -D css-loader style-loader
-//sass
-npm i -D sass-loader
-npm i -D node-sass
-
-//ajax请求
-npm i -D axios  / fetch

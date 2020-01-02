@@ -2,7 +2,6 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 /* 基于commonjs */
-/* 》》》》》》》》》》》》》》配置文件内容发生改变需要重启 */
 module.exports = {
     // 1、入口文件，默认为index.js
     /* 入口文件可以有多个，=>多页面应用 */
@@ -36,10 +35,8 @@ module.exports = {
     /* 加载css/sass/less/vue/图片等 */
     module: {
         /* 加载器的规则 */
-        rules: [
-            //-----------js文件编译规则
-            {
-
+        rules: [{
+                //-----------js文件编译规则
                 /* 匹配以 .js  结尾的文件=>即js文件 */
                 /* js */
                 // test: /\.js$/,
@@ -49,36 +46,23 @@ module.exports = {
                 exclude: path.resolve(__dirname, 'node_modules'),
                 /* 使用哪种加载器 */
                 use: [{
-                        loader: 'babel-loader',
-                        options: { //------------^^^^^^^^^^^^^^----------->[ptions]
-                            presets: ['@babel/preset-react'],
-                            /* 浏览器支持高阶组件的简写（设计模式） 
-                                npm i -D @babel/plugin-proposal-decorators 
-                            */
-                            plugins: [
-                                /* 1--------- */
-                                ['@babel/plugin-proposal-decorators', {
-                                    legacy: true
-                                }]
-                            ],
-                        }
-                    },
-                    // css loader(注意顺序:从后往前)
-                    /* npm i -D css-loader  
-                       npm i -D style-loader
-                    */
-                    // {
-                    //     test: /\.css$/,
-                    //     use: ['style-loader', 'css-loader']
-                    // },
-
-
-                ]
+                    loader: 'babel-loader',
+                    options: { //------------^^^^^^^^^^^^^^----------->[ptions]
+                        presets: ['@babel/preset-react'],
+                        /* 浏览器支持高阶组件的简写（设计模式） 
+                            npm i -D @babel/plugin-proposal-decorators 
+                        */
+                        plugins: [
+                            /* 1--------- */
+                            ['@babel/plugin-proposal-decorators', {
+                                legacy: true
+                            }]
+                        ],
+                    }
+                }]
             },
-
-
             //-----------其他文件编译规则
-            // css-loader
+            //css-loader
             {
                 test: /\.css$/,
                 /* 无参数，可写成数组形式 =>两者有顺序问题*/
@@ -86,13 +70,6 @@ module.exports = {
                 /* 从后往前编译，即先编译css-loader=>style-loader */
                 use: ['style-loader', 'css-loader']
 
-            },
-
-            // sass loader(注意顺序:从后往前) 
-            /* npm i -D sacss-loader */
-            {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
 
