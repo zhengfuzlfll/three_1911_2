@@ -4,6 +4,10 @@ import React, {
 
 import {withStorage} from '../utils/hoc.js';
 
+/*高阶组件 （装饰器模式）写法2  */
+/* 浏览器不支持=>插件 npm i -D @babel/plugin-proposal-decorators 配置webpack */
+
+@withStorage
 // console.dir(withStorage)
 class Home extends Component{
     render(){
@@ -13,6 +17,6 @@ class Home extends Component{
         </div>
     }
 }
-
-Home=withStorage(Home);
+/* 高阶组件  写法1 */
+// Home=withStorage(Home);
 export default Home;

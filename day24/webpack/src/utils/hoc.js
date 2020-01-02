@@ -11,8 +11,23 @@ export function withStorage(InnerComponent) {
     //     user=JSON.parse(user);
     
     // }
-    return function OuterComponent(){
-        return <InnerComponent user={user}></InnerComponent>
+    /* 函数组件------------ */
+    // return function OuterComponent(props){
+    //     // console.log('OuterComponent',props)
+    //     /* history  location match 在props中     */
+    //     /* props.children   将组件里的数据原封不动传输过去 
+    //         <Home>aaaa</Home>  =>将aaaa原封不动传输
+    //     */
+    //     return <InnerComponent user={user} {...props}>{props.children}</InnerComponent>
         
+    // }
+    /* 类组件------------ */
+   return class OuterComponent extends React.Component{
+        render(){
+            return <InnerComponent user={user} {...this.props}>{this.props.children}</InnerComponent>
+        }
     }
+
+
+
 }

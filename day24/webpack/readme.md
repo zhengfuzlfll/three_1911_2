@@ -15,3 +15,6 @@ npm install antd --save
 
 // 编译css 
 npm i css-loader style-loader -D
+
+//浏览器支持装饰器模式,再配置webpack
+npm i -D @babel/plugin-proposal-decorators

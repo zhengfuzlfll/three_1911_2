@@ -146,6 +146,6 @@ class APP extends Component{
     }
 }
 
-/* 高阶组件，获取到history */
+/* 高阶组件，获取到history  写法1*/
 APP=withRouter(APP)
 export default APP;

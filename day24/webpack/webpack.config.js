@@ -47,8 +47,17 @@ module.exports = {
                 /* 使用哪种加载器 */
                 use: [{
                     loader: 'babel-loader',
-                    options: { //------------^^^6666666^----------->[ptions]
-                        presets: ['@babel/preset-react']
+                    options: { //------------^^^^^^^^^^^^^^----------->[ptions]
+                        presets: ['@babel/preset-react'],
+                        /* 浏览器支持高阶组件的简写（设计模式） 
+                            npm i -D @babel/plugin-proposal-decorators 
+                        */
+                        plugins: [
+                            /* 1--------- */
+                            ['@babel/plugin-proposal-decorators', {
+                                legacy: true
+                            }]
+                        ],
                     }
                 }]
             },
