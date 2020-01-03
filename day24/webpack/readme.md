@@ -27,4 +27,8 @@ npm i -D sass-loader
 npm i -D node-sass
 
 //ajax请求
-npm i -D axios  / fetch
+npm i -D axios      / fetch  /jquery
+
+api文件夹 => 封装axios  即ajax请求
+ 
+
