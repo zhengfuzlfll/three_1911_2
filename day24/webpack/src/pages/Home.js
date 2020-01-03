@@ -10,7 +10,7 @@ import {withStorage} from '../utils/hoc.js';
 /* 封装好的axios     */
 import Api  from '../api/index.js';
 
-import { Carousel } from 'antd';
+import { Carousel,Icon,Row,Col} from 'antd';
 
 
 
@@ -23,7 +23,8 @@ class Home extends Component{
         super(props);
 
         this.state={
-            recomend:[]
+            recomend:[],
+            datalist:[]
         }
      
     }
@@ -37,12 +38,17 @@ class Home extends Component{
             act:'index'
         })
         console.log('data',data)
-
+        /* 首页轮播图 */
         let recomend=data.datas[0].adv_list.item;
+
+        /* 首页数据 */
+        let datalist=data.datas.slice(1).map(item=>item.goods)
+
         this.setState({
-            recomend
+            recomend,
+            datalist
         })
-        
+        // console.log('datalist',datalist);
     }
 
 
@@ -50,10 +56,12 @@ class Home extends Component{
 
     render(){
     console.log('Home',this.props)
-    let {recomend} = this.state
+    let {recomend,datalist} = this.state
+    
     /* style={{background:'red',textAlign:'center'}} */
 
         return <div>
+            {/*《《《《《《 轮播图 */}
             <Carousel  autoplay>
             {/* autoplay */}
                 {/* <div>
@@ -83,8 +91,42 @@ class Home extends Component{
                     recomend.map(item=>{
                         return <img key={item.image} src={item.image}></img>
                     })  
-                  }
+                }
             </Carousel>
+                
+           {/* 《《《《首页数据 */} 
+            <div>
+                {datalist.map(item=>{
+                    return (
+                        <React.Fragment key={item.title}>
+                            <h4>{item.title}</h4>
+                            <Row gutter={[10,10]} > 
+                                {item.item.map(item=>{
+                                  return  <Col 
+                                            span={12} 
+                                            key={item.goods_id}
+                                            // xs={12}
+                                            // md={8}
+                                            // xl={6}
+                                            >
+                                        <img src={item.goods_image} style={{width:'100%'}}></img>
+                                        <h5>{item.goods_name}</h5>
+                                        <p className='price'>
+                                            {/* 原价 */}
+                                            <del>{item.goods_price}</del>
+                                            {/* 优惠价 */}
+                                            <span>{item.goods_promotion_price}</span>
+                                        </p>
+                                    </Col>
+                                })}
+                            </Row>
+                        </React.Fragment>
+                    )
+                })}
+                
+
+            </div>
+           
         </div>
     }
 }

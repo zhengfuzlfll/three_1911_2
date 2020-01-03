@@ -1,7 +1,29 @@
+@charset "UTF-8";
 .nav-link button {
   color: #fff;
 }
 
 .nav-link button:hover {
   color: #1890ff;
+}
+
+.price {
+  /* 伪元素实现 */
+}
+
+.price del {
+  margin-right: 10px;
+  color: #999;
+}
+
+.price span {
+  color: red;
+}
+
+.price span::before {
+  content: '￥';
+}
+
+.price del::before {
+  content: '￥';
 }
