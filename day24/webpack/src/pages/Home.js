@@ -26,8 +26,22 @@ class Home extends Component{
             recomend:[],
             datalist:[]
         }
+
+        // this.goto=this.goto.bind(this)
      
     }
+    // goto(id){
+
+    // }
+    /*使用箭头函数，可不用修正this指向，因为箭头函数中 无this*/
+    goto=()=>{
+
+    }
+
+
+
+
+    /* 用于发送ajax请求 */
    async componentDidMount(){
         /* Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。 */
         /* axios.get('https://www.nanshig.com/mobile/index.php?act=index')  得到promise对象 */
@@ -53,13 +67,12 @@ class Home extends Component{
 
 
 
-
+    /* 渲染 */
     render(){
     console.log('Home',this.props)
     let {recomend,datalist} = this.state
     
     /* style={{background:'red',textAlign:'center'}} */
-
         return <div>
             {/*《《《《《《 轮播图 */}
             <Carousel  autoplay>
@@ -108,6 +121,9 @@ class Home extends Component{
                                             // xs={12}
                                             // md={8}
                                             // xl={6}
+
+                                            /* 点击跳转详情页 */
+                                            onClick={this.goto.bind(this,`/goods/${item.goods_id}`)}
                                             >
                                         <img src={item.goods_image} style={{width:'100%'}}></img>
                                         <h5>{item.goods_name}</h5>

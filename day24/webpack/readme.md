@@ -31,4 +31,5 @@ npm i -D axios      / fetch  /jquery
 
 api文件夹 => 封装axios  即ajax请求
  
-
+//支持箭头函数,配置webpack
+npm  i -D @babel/plugin-proposal-class-properties
