@@ -135,5 +135,16 @@ module.exports = {
     },
 
 
+    /* 6、目录映射（别名） */
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src')
+            '~': path.resolve(__dirname, './src/components')
+        },
+        /* 后缀 先查找index.js,没有则查 .json文件*/
+        // extensions:['.js','.json']
+    }
+
+
 
 }

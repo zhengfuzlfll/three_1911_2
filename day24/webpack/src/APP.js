@@ -121,7 +121,7 @@ class APP extends Component{
             </ul> */}
             <Row style={{backgroundColor:'#001529'}}>
                 {/* 列 */}
-                <Col span={16} >
+                <Col span={14} >
                 <Menu 
                     mode="horizontal" 
                     onSelect={this.changeMenu} 
@@ -148,7 +148,7 @@ class APP extends Component{
                 </Col>
                 
                 {/* --登录注册------------ */}
-                <Col span={8} style={{lineHeight:'46px',textAlign:'right'}} className="nav-link">
+                <Col span={10} style={{lineHeight:'46px',textAlign:'right'}} className="nav-link">
                     <Button 
                     type="link"
                     icon='login' 
