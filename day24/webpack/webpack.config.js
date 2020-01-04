@@ -56,10 +56,14 @@ module.exports = {
                                 npm i -D @babel/plugin-proposal-decorators 
                             */
                             plugins: [
-                                /* 1--------- */
+                                /* 1---支持高阶组件的简写（设计模式）------ */
                                 ['@babel/plugin-proposal-decorators', {
                                     legacy: true
-                                }]
+                                }],
+                                /* 支持箭头函数，支持静态属性 */
+                                ['@babel/plugin-proposal-class-properties', {
+                                    loose: true
+                                }],
                             ],
                         }
                     },

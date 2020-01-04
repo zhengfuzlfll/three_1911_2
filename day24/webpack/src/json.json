@@ -1,0 +1,188 @@
+[{
+        "adv_list": {
+            "item": [{
+                "image": "https://www.nanshig.com/data/upload/mobile/special/s0/s0_06243025264274102.jpg",
+                "type": "keyword",
+                "data": "潮男"
+            }]
+        }
+    },
+    {
+        "goods": {
+            "title": "秋冬新品推荐",
+            "item": [{
+                    "goods_id": "227345",
+                    "goods_name": "男士破洞春秋牛仔夹克男潮2019新款春装上衣韩版潮流褂子春季外套 浅蓝色 XL",
+                    "goods_promotion_price": "128.00",
+                    "goods_price": "128.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_06266619174795164_240.jpg"
+                },
+                {
+                    "goods_id": "227330",
+                    "goods_name": "2019新款外套男韩版潮流休闲帅气工装夹克男士灯芯绒春秋季上衣服 咖啡色 XL",
+                    "goods_promotion_price": "158.00",
+                    "goods_price": "158.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_06266617413539238_240.jpg"
+                },
+                {
+                    "goods_id": "227313",
+                    "goods_name": "男生灯芯绒工装外套男韩版潮流加绒夹克ins百搭港风帅气原宿上衣 灰色 XL",
+                    "goods_promotion_price": "108.00",
+                    "goods_price": "108.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_06266614650486239_240.jpg"
+                },
+                {
+                    "goods_id": "227283",
+                    "goods_name": "秋冬季男士潮流修身青年水洗外套中长款韩版牛仔夹克纯棉翻领外衣 黑色 XL",
+                    "goods_promotion_price": "118.00",
+                    "goods_price": "118.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_06266611090936217_240.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "goods": {
+            "title": "裤子全新上市",
+            "item": [{
+                    "goods_id": "226725",
+                    "goods_name": "潮男秋冬季裤子男韩版潮流秋季加绒运动男士休闲裤宽松潮牌束脚工装裤 深灰色 L",
+                    "goods_promotion_price": "119.00",
+                    "goods_price": "119.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_05960745627128595_240.jpg"
+                },
+                {
+                    "goods_id": "226708",
+                    "goods_name": "裤子男韩版潮流秋冬季运动裤男士加绒宽松休闲束脚长裤潮牌工装裤 黑色 XL",
+                    "goods_promotion_price": "119.00",
+                    "goods_price": "119.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_05960739685357586_240.jpg"
+                },
+                {
+                    "goods_id": "225907",
+                    "goods_name": "哈伦裤男秋季韩版2017新款潮流修身青少年学生运动休闲百搭束脚裤 黑色 L",
+                    "goods_promotion_price": "130.00",
+                    "goods_price": "130.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/15/15_05600017640352052_240.jpg"
+                },
+                {
+                    "goods_id": "225849",
+                    "goods_name": "休闲裤男士裤子男冬季修身小脚韩版潮流秋冬款2017学生哈伦束脚裤 宝蓝 32",
+                    "goods_promotion_price": "125.00",
+                    "goods_price": "125.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/15/15_05599992122073239_240.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "goods": {
+            "title": "潮男个性内裤",
+            "item": [{
+                    "goods_id": "226473",
+                    "goods_name": "男士内裤男平角裤纯棉宽松舒适透气青年潮韩版低腰性感四角短裤头 3条装【栀子+藏白+牡丹】 L",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/46/46_05928796945531887_240.jpg"
+                },
+                {
+                    "goods_id": "226449",
+                    "goods_name": "南极人4条男士内裤男纯棉质透气U凸平角裤四角裤衩男生可爱短裤头 B组 L",
+                    "goods_promotion_price": "69.00",
+                    "goods_price": "69.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/46/46_05928791149095904_240.jpg"
+                },
+                {
+                    "goods_id": "226517",
+                    "goods_name": "4条男士内裤 男三角裤纯棉舒适透气短裤性感裤头秋冬男式短裤 C组 L",
+                    "goods_promotion_price": "79.00",
+                    "goods_price": "79.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/46/46_05933889740034416_240.jpg"
+                },
+                {
+                    "goods_id": "226508",
+                    "goods_name": "4条内裤男士内裤平角裤木纤维裤头男式中腰四角短裤秋冬裤衩 D组 L",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/46/46_05933887450255903_240.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "goods": {
+            "title": "潮男必备鞋款",
+            "item": [{
+                    "goods_id": "226550",
+                    "goods_name": "型男鞋子男秋季透气板鞋韩版潮流百搭帆布鞋休闲布鞋学生鞋男 灰色 42",
+                    "goods_promotion_price": "125.00",
+                    "goods_price": "125.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/41/41_05935724160716756_240.jpg"
+                },
+                {
+                    "goods_id": "226592",
+                    "goods_name": "型男小白鞋男鞋韩版潮流男士休闲鞋秋季学生板鞋透气潮鞋子 绿色 42",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/41/41_05935730369793448_240.jpg"
+                },
+                {
+                    "goods_id": "226646",
+                    "goods_name": "潮男鞋百搭潮鞋小白鞋高帮休闲鞋青少年运动学生板鞋6CM内增高男鞋8公分 白色 42",
+                    "goods_promotion_price": "106.00",
+                    "goods_price": "106.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/42/42_05943353450158107_240.jpg"
+                },
+                {
+                    "goods_id": "226616",
+                    "goods_name": "潮男鞋高帮鞋板鞋韩版潮流百搭秋季厚底内增高小白鞋情侣休闲运动男鞋子 白色 42",
+                    "goods_promotion_price": "108.00",
+                    "goods_price": "108.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/42/42_05943344220891470_240.jpg"
+                },
+                {
+                    "goods_id": "226775",
+                    "goods_name": "冬季新款小白鞋子男韩版潮流休闲鞋学生百搭板鞋运动男士潮鞋 白红 42",
+                    "goods_promotion_price": "108.00",
+                    "goods_price": "108.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/41/41_05961421903930109_240.jpg"
+                },
+                {
+                    "goods_id": "226751",
+                    "goods_name": "冬季新款男鞋子男士潮鞋百搭休闲鞋帆布鞋韩版潮运动秋季板鞋 灰色 42",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/41/41_05961416010473862_240.jpg"
+                },
+                {
+                    "goods_id": "227152",
+                    "goods_name": "2019春季新款小白鞋男鞋子韩版夏季板鞋男士百搭白鞋帆布休闲潮鞋 白红 42",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071098393605574_240.jpg"
+                },
+                {
+                    "goods_id": "227170",
+                    "goods_name": "2019春季新款小白鞋男士板鞋男韩版潮鞋休闲鞋百搭白鞋男鞋子夏季 白黑 42",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071101171302018_240.jpg"
+                },
+                {
+                    "goods_id": "227160",
+                    "goods_name": "2019春季新款小白鞋男士板鞋男韩版潮鞋休闲鞋百搭白鞋男鞋子夏季 白色 41",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071100369195301_240.jpg"
+                },
+                {
+                    "goods_id": "227206",
+                    "goods_name": "2019春季透气阿甘鞋男小白鞋男士休闲帆布板鞋韩版潮流男鞋子潮鞋 白绿 42",
+                    "goods_promotion_price": "89.00",
+                    "goods_price": "89.00",
+                    "goods_image": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071103834357355_240.jpg"
+                }
+            ]
+        }
+    }
+]

@@ -24,7 +24,8 @@ export function withStorage(InnerComponent) {
     /* 类组件------------ */
    return class OuterComponent extends React.Component{
         render(){
-            return <InnerComponent user={user} {...this.prop}>{this.props.children}</InnerComponent>
+            
+            return <InnerComponent user={user} {...this.props}>{this.props.children}</InnerComponent>
         }
     }
 

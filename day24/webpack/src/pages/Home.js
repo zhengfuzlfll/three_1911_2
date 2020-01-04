@@ -34,7 +34,12 @@ class Home extends Component{
 
     // }
     /*使用箭头函数，可不用修正this指向，因为箭头函数中 无this*/
-    goto=()=>{
+    /* 插件支持 npm  i -D @babel/plugin-proposal-class-properties*/
+   /* 点击跳转详情页 */
+    goto=(id)=>{
+        // console.log('Home-this',this)
+        // console.log('id',id)
+        this.props.history.push(`/goods/${id}`)
 
     }
 
@@ -123,7 +128,7 @@ class Home extends Component{
                                             // xl={6}
 
                                             /* 点击跳转详情页 */
-                                            onClick={this.goto.bind(this,`/goods/${item.goods_id}`)}
+                                            onClick={this.goto.bind(this,item.goods_id)}
                                             >
                                         <img src={item.goods_image} style={{width:'100%'}}></img>
                                         <h5>{item.goods_name}</h5>
