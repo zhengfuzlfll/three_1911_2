@@ -150,29 +150,29 @@ class Goods extends Component{
             <div style={Styles.pd} >
                 <h4 style={Styles.mt}>推荐列表</h4>
                 <Row gutter={30}>
-                {
-                    commedList.map(goods=>{
-                        return <Col
-                        key={goods.goods_id} 
-                        style={{minHeight:280}}
-                        xs={12}
-                        sm={6}
-                        md={4}
+                    {
+                        commedList.map(goods=>{
+                            return <Col
+                            key={goods.goods_id} 
+                            style={{minHeight:280}}
+                            xs={12}
+                            sm={6}
+                            md={4}
 
-                        /* 点击推荐列表跳转 */
-                        onClick={this.goto.bind(this,goods.goods_id)}
-                    //    onClick={this.goto.bind(this,goods.goods_id)}
-                        >
-                            <img src={goods.goods_image_url} style={{width:'100%'}}/>
-                            <h5>{goods.goods_name}</h5>
-                            <p className="price">
-                                <del>{goods.goods_promotion_price}</del>
-                                <span>{(goods.goods_promotion_price*0.8).toFixed(2)}</span>
-                            </p>
-                        </Col>
-                    })
-                }
-            </Row>
+                            /* 点击推荐列表跳转 */
+                            onClick={this.goto.bind(this,goods.goods_id)}
+                        //    onClick={this.goto.bind(this,goods.goods_id)}
+                            >
+                                <img src={goods.goods_image_url} style={{width:'100%'}}/>
+                                <h5>{goods.goods_name}</h5>
+                                <p className="price">
+                                    <del>{goods.goods_promotion_price}</del>
+                                    <span>{(goods.goods_promotion_price*0.8).toFixed(2)}</span>
+                                </p>
+                            </Col>
+                        })
+                    }
+                </Row>
             {/* <Goodslist datalist={commedList} title="推荐列表"/> */}
             </div>
         </div>

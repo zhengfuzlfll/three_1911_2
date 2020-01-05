@@ -22,6 +22,7 @@ class Discover extends Component{
     }
 
     /* 方法 */
+    /* 切换顶部 选项卡*/
     changeType = (idx)=>{
         this.props.history.replace('/discover/'+idx);
     }
@@ -44,6 +45,7 @@ class Discover extends Component{
         });
 
         // 请求第一个tab对应的数据
+        /* 默然跳转到第一个 */
         this.changeType(activeKey);
     }
 
