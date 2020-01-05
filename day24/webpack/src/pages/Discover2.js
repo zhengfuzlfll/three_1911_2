@@ -2,7 +2,16 @@ import React, {
     Component
 } from 'react';
 
+import api from '../api'
+
 class Discover extends Component{
+
+shouldComponentUpdate(){
+
+}
+componentWillUpdate(){
+
+}
     render(){
         let {match}=this.props
         return <div>
@@ -19,6 +28,40 @@ class Discover extends Component{
                 {/* 解构 */}
                 <Route path={match.path+'/computer'} component={Computer}></Route>
                 <Route path={match.path+'/access'} component={Access}></Route>
+
+                <div></div>
+               <input type="text"/>
+               <a href=""></a>
+               <cart></cart>
+               <react1></react1>
+               <reac></reac>
+                <div></div>
+                <script></script>
+                <About></About>
+                <div></div>
+               <Axios></Axios>
+               <script></script>
+               <input type="text"/>
+               <div></div>
+               <Scri></Scri>
+                <p></p>
+                <Abou></Abou>
+                <jaav></jaav>
+                <java></java>
+                <a></a>
+                <java></java>
+                <jaav></jaav>
+                <scritpeasdf></scritpeasdf>
+                <code></code>
+                <java></java>
+                <input type="text"/>
+                <form action=""></form>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <a href=""></a>
+                <a href=""></a>
             </Switch>
         </div>
     }

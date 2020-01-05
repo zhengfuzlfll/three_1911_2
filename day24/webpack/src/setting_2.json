@@ -1,0 +1,19 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 1,
+    "files.autoSave": "afterDelay",
+    "cssrem.rootFontSize": 75,
+    "editor.formatOnSave": true,
+    "explorer.autoReveal": false,
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.formatOnSaveTimeout": 5000,
+    "php-cs-fixer.executablePath": "${extensionPath}\\php-cs-fixer.phar",
+    "php-cs-fixer.lastDownload": 1569322789143,
+    "php-cs-fixer.autoFixBySemicolon": true,
+    "editor.find.autoFindInSelection": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true
+}
