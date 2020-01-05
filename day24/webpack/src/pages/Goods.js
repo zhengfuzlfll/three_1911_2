@@ -33,7 +33,8 @@ class Goods extends Component{
 
     /* 方法 */
     /* 点击跳转 */
-    goto=(id)=>{/* 给实例添加方法 */
+    /* 给实例添加方法 */
+    goto=(id)=>{
         this.props.history.push(`/goods/${id}`)
     }
 
@@ -94,8 +95,10 @@ class Goods extends Component{
         // console.log(666);
         // console.log('prevProps',prevProps)
         /* 添加判断条件，防止进入死循环 */
+        /* prevProps 前一次的history   this.props.match当前的history*/
         if(prevProps.match.params.id!=this.props.match.params.id){
             this.getData()
+            
         }
         
 
@@ -114,12 +117,18 @@ class Goods extends Component{
             {/* >>>>>>>>>大图+标题 */}
             <div className="img-container">
                 <img src={data.goods_image} />
+                {/* 收藏 */}
                 <Icon type="heart" style={{ fontSize: 30, color: '#f00' }} />
 
                 <Icon
                     className="btnBack"
+                    /* 返回上一级 */
                     type="arrow-left"
                     style={{ fontSize: 30, color: '#f00' }}
+                    /* 点击返回上一级 */
+                    onClick={()=>{
+                        this.props.history.goBack();
+                    }}
                    />
             </div>
             <div style={Styles.pd}>
@@ -128,6 +137,8 @@ class Goods extends Component{
                     <del>{data.goods_price}</del>
                     <span>{(data.goods_promotion_price * 0.8).toFixed(2)}</span>
                 </p>
+
+                {/* 添加购物车 */}
                 <Button.Group>
                     <Button icon="shopping-cart" size="large">添加到购物车</Button>
                     <Button icon="shopping" type="danger" size="large">立即购买</Button>
@@ -147,6 +158,7 @@ class Goods extends Component{
                         xs={12}
                         sm={6}
                         md={4}
+
                         /* 点击推荐列表跳转 */
                         onClick={this.goto.bind(this,goods.goods_id)}
                     //    onClick={this.goto.bind(this,goods.goods_id)}

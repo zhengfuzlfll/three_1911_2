@@ -174,9 +174,10 @@ class APP extends Component{
                 {/* exact 精确匹配 ,Switch只匹配一个，就不会往后面匹配*/}
                 
                 <Route path='/home' component={Home}></Route>
+                {/*嵌套路由》》到相应组件 Switch  Route >>>>>discover*/}
                 <Route path='/discover' component={Discover}></Route>
                 <Route path='/cart' component={Cart}></Route>
-                {/* 动态路由      -------       */}
+                {/* 动态路由    /goods/:id  -------       */}
                 <Route path='/goods/:id' component={Goods}></Route>
                 <Route path='/login' component={Login}></Route>
                 <Route path='/reg' component={Reg}></Route>
