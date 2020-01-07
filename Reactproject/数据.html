@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let buycar = document.querySelector('.buy-car ul').querySelectorAll('li');
+        // let oimg=buycar[0].getElementsByTagName('img')[0].src;
+        // let title=buycar[0].querySelector('strong').innerText;
+        // let price=buycar[0].querySelector('em').innerText;
+        /* 热门车 */
+        let arr = [];
+        for (let i = 0, len = buycar.length; i < len; i++) {
+            let o = {};
+            o.img = buycar[i].getElementsByTagName('img')[0].src;
+            o.title = buycar[i].querySelector('strong').innerText
+            o.price = buycar[i].querySelector('em').innerText;
+            arr.push(o);
+        }
+        let res = JSON.stringify(arr);
+        console.log(res);
+
+        /* 按品牌 */
+        let boxcar = document.querySelector('.boxcar ul').querySelectorAll('li')
+        // let car = document.querySelector('.boxcar ul').children
+        let arr = []
+        for (let i = 0, len = boxcar.length; i < len; i++) {
+            let o = {};
+            o.img = boxcar[i].querySelector('img').src;
+            o.title = boxcar[i].querySelector('.brand-name').innerText;
+            arr.push(o);
+        }
+        let res = JSON.stringify(arr);
+        console.log(res);
+
+
+ mongoimport h51911 dbname abc collectionname --file filename --headerline json title,img
+field
+
+mongoimport -d h51911 -c abc --file D:/h5-1911/three/three_1911_2/Reactproject/car.json --type json
+
+    </script>
+</body>
+
+</html>
